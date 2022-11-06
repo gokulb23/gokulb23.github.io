@@ -8,8 +8,7 @@ html {
 }
 
 body {
-    margin-left: 5%;
-    margin-right: 5%;
+    margin-left: 0;
     font-family: 'Alliance No.1', sans-serif;
     color: white;
 }
@@ -36,4 +35,32 @@ figcaption {
     padding: 0%;
     margin-left: 5%;
     font-size: 70%;
+}
+
+.navbar {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background-color: #161b38;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+.navli {
+    float: left;
+}
+
+.nava {
+    display: block;
+    padding: 16px;
+    text-decoration: none;
+}
+
+.nava:hover:not(.active) {
+    background-color: black;
+}
+
+.nava.active {
+    background-color: blueviolet;
 }

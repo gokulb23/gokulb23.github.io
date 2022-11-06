@@ -6,10 +6,15 @@
 <title>Gokul's C Projects</title>
 </head>
 <body>
-<h1 style="font-size: 350%;">C Projects</h1>
 <h3>
-    <nav><a href="./index.html" style="text-decoration: none;">Home</a> | <a href="./pyprojects.html" style="text-decoration: none;">Python Projects</a></nav>
+<ul class="navbar">
+    <li class="navli"><a href="./index.html" class="nava">Home</a></li>
+    <li class="navli"><a href="./cprojects.html" class="nava active">C</a></li>
+    <li class="navli"><a href="./pyprojects.html" class="nava">Python</a></li>
+</ul>
 </h3>
+<div style="margin-left: 15px; margin-top: 100px; max-width: 600px;">
+<h1 style="font-size: 350%;">C Projects</h1>
 <div class="sideBySide" style="margin-top: 4%;">
 <h3 style="margin-top: 0%;">goksh</h3>
 <p>Made a <a href="https://www.opengroup.org/membership/forums/platform/unix">UNIX</a> shell clone with the following functionality:</p>
@@ -17,16 +22,38 @@
     <li>Interactive mode (standard input mode) and batch mode (file input)</li>
     <li>In-built exit, cd, and path commands</li>
     <li>Program output redirection to file</li>
-    <li>Can execute programs in paths specified by path command<br>(/bin specified by default)</li>
+    <li>Can execute programs in paths specified by path command (/bin specified by default)</li>
     <li>Custom if command:<pre> if cmd == const then cmd fi</pre></li>
 </ul>
 </div>
-<div class="sideBySide">
+<div>
 <figure>
 <img src="gokshWorking.png" alt="goksh demonstration of path and if" id="gokshWorking">
-<figcaption>Demonstration of goksh path and if commands.<br>(one is a program that simply returns 1 and
-    <br>hello is a program that prints "hello")</figcaption>
+<figcaption style="width: 300px;">Demonstration of goksh path and if commands. (one is a program that simply returns 1 and hello is a program that prints "hello")</figcaption>
 </figure>
+</div>
+<h3 style="margin-top: 4%;">xv6 Modifications</h3>
+<p>Made the following modifications to the xv6 OS:
+    <ul>
+        <li>
+            Implemented multi-level priority queue scheduler with round-robin
+            <ul>
+                <li>High priority tasks run round-robin</li>
+                <li>Low priority tasks run round-robin when there are no high priority tasks queued</li>
+            </ul>
+        </li>
+        <li>Made NULL dereferences cause segmentation faults by changing where user programs are loaded.</li>
+        <li>Added system calls to protect a range of pages in memory (make them read-only).</li>
+    </ul>
+</p>
+<h3 style="margin-top: 4%">Cache Simulator</h3>
+<p> 
+    Coded a cache simulator that can replay traces (from Valgrind) and output
+    statistics for the number of hits, misses, and evictions.
+    The page replacement policy is least-recently-used(LRU).
+</p>
+<h3 style="margin-top: 4%">C Program Heap Simulator</h3>
+<p>Coded a heap simulator with a free list structure and best-fit placement policy.</p>
 </div>
 </body>
 </html>
